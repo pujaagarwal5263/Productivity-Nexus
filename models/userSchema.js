@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const emailSchema = new mongoose.Schema({
   subject: String,
@@ -6,19 +6,19 @@ const emailSchema = new mongoose.Schema({
   recipient_array: [
     {
       name: String,
-      email: String,
-    },
+      email: String
+    }
   ],
-  scheduledAt: Date, 
-});
+  scheduledAt: Date
+})
 
 const userSchema = new mongoose.Schema({
   email: String,
-  accessToken: String, 
-  starredEmails: [emailSchema], 
+  accessToken: String,
+  starredEmails: [emailSchema],
   scheduledEmails: [emailSchema]
-});
+})
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema)
 
-module.exports = User;
+module.exports = User
