@@ -1,7 +1,8 @@
-var mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
 mongoose.connect(process.env.MONGODB_URL).then(() => {
-    console.log("Database Connected Successfully");
+  console.log('Database Connected Successfully')
 }).catch((err) => {
-    console.log("No Connection to Database");
+  console.log('error:', err)
+  console.log('No Connection to Database')
 })
