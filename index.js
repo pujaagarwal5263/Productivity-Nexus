@@ -1,10 +1,12 @@
 const express = require('express')
 const cors = require('cors')
+// Nylas Init
 require('./initialise/index')
+
 const router = require('./routes/router')
 const { configDotenv } = require('dotenv')
 configDotenv()
-require('./db-connection')
+// require('./db-connection')
 
 const app = express()
 const port = process.env.PORT || 8000
